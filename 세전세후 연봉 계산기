@@ -1,0 +1,32 @@
+def yearly_payment(monthly_payment):
+  k=0
+  #세율 저장
+  rate = [0.06,0.15,0.24,0.35,0.38,0.4,0.42]
+
+  #세전 연봉 계산
+  year_prerate = monthly_payment * 12
+  print(f"세전 연봉: {year_prerate}만원")
+
+  #세율 계산
+  if year_prerate <=1200:
+    k=0
+  elif year_prerate<=4600:
+    k=1
+  elif year_prerate<=8800:
+    k=2
+  elif year_prerate<=15000:
+    k=3
+  elif year_prerate<=30000:
+   k=4
+  elif year_prerate<=50000:
+    k=5
+  else:
+    k=6
+
+  #세후 연봉 계산
+  year_aftrate = year_prerate*(1-rate[k])
+  print(f"세후 연봉: {year_aftrate}만원")
+
+
+monthly_payment = int(input("월급을 입력하세요:"))
+yearly_payment(monthly_payment)
