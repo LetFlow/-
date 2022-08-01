@@ -1,0 +1,18 @@
+def gugudan(number):
+    result = 0
+    i = 1
+    
+    while(True):
+        result = number * i
+        if result <=50:
+            print(f"{number} X {i} = {result}")
+        else:
+            break
+        i+=2
+
+try:
+  number = int(input("몇 단? : "))
+  print(f"{number} 단")
+  gugudan(number)
+except:
+  print("자연수를 입력해주세요")
