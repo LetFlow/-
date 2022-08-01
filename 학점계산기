@@ -1,0 +1,31 @@
+def grader(name,score):
+
+  grade = ['A+','A','B+','B','C+','C','D+','D','F']
+  
+#점수별 학점구간 설정
+  if score >= 95:
+    k=0
+  elif score >=90:
+    k=1
+  elif score >=85:
+    k=2
+  elif score >=80:
+    k=3
+  elif score >=75:
+    k=4
+  elif score >=70:
+    k=5
+  elif score >=65:
+    k=6
+  elif score >=60:
+    k=7
+  else:
+    k=8
+    
+  print(f'학생이름 : {name}')
+  print(f'점수 : {score}점')
+  print(f'학점 : {grade[k]}')
+
+name=input("학생의 이름을 입력하세요:")
+score=input("점수를 입력하세요:")
+grader(name, int(score))
