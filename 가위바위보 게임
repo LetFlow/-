@@ -1,0 +1,43 @@
+def rcp(val):
+		#컴퓨터 랜덤값 지정
+    import random
+    computer = random.randint(0,2)
+
+    li=['가위', '바위', '보']
+    
+    if val == li[0]:
+      val = 0
+    elif val==li[1]:
+      val = 1
+    elif val==li[2]:
+      val = 2
+        
+    if val == 0:
+      if computer == 0:
+        print(f'나:{li[val]},컴퓨터:{li[computer]}, 비김')
+      if computer == 1:
+        print(f'나:{li[val]},컴퓨터:{li[computer]}, 컴퓨터 승리')
+      if computer == 2:
+        print(f'나:{li[val]},컴퓨터:{li[computer]}, 나 승리')
+    elif val ==1:
+      if computer == 0:
+        print(f'나:{li[val]},컴퓨터:{li[computer]}, 나 승리')
+      if computer == 1:
+        print(f'나:{li[val]},컴퓨터:{li[computer]}, 비김')
+      if computer == 2:
+        print(f'나:{li[val]},컴퓨터:{li[computer]}, 컴퓨터 승리')  
+    elif val ==2:
+      if computer == 0:
+        print(f'나:{li[val]},컴퓨터:{li[computer]}, 컴퓨터 승리')
+      if computer == 1:
+        print(f'나:{li[val]},컴퓨터:{li[computer]}, 나 승리')
+      if computer == 2:
+        print(f'나:{li[val]},컴퓨터:{li[computer]}, 비김') 
+
+
+sample=['가위','바위','보']
+val=input('입력(가위,바위,보 중 1택):')
+if val in sample:
+  rcp(val)
+else:
+  print('잘못입력했습니다.')
