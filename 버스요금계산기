@@ -1,0 +1,33 @@
+def bus_fare(age,type):
+ # 요금표 저장
+  fee_list = [['무료','450원','720원','1200원','무료'],['무료','450원','1000원','1300원','무료']]
+
+  #매개변수 초기화
+  type_arg=""
+  fee_arg=""
+
+  #지불유형 결정
+  if type == '카드':
+    type_arg = 0
+  elif type == '현금':
+    type_arg = 1
+
+  #연령대 결정
+  if age < 8:
+    fee_arg = 0
+  elif age <14:
+    fee_arg = 1
+  elif age <20:
+    fee_arg = 2
+  elif age >=75:
+    fee_arg = 4
+  elif age >=20:
+    fee_arg = 3
+
+  print(f"나이: {age}세")
+  print(f"지불유형: {type}")
+  print(f"버스요금: {fee_list[type_arg][fee_arg]}")
+
+age=input("나이를 입력하세요:")
+type=input("지불유형을 입력하세요(카드/현금):")
+bus_fare(int(age),type)
